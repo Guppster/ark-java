@@ -4,7 +4,6 @@
 
 import spock.lang.Specification
 import io.ark.core.*
-import com.google.common.io.BaseEncoding
 
 class NetworkTest extends Specification {
 
