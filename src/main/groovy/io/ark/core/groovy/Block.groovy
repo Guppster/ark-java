@@ -1,4 +1,6 @@
 
+package io.ark.core.groovy
+
 import java.nio.*
 import groovy.transform.*
 import com.google.common.io.BaseEncoding

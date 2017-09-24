@@ -1,3 +1,5 @@
+package io.ark.core.groovy
+
 class Verification
 {
     List<String> errors = []

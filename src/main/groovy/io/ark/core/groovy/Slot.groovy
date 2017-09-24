@@ -1,3 +1,5 @@
+package io.ark.core.groovy
+
 import java.text.SimpleDateFormat
 
 class Slot {

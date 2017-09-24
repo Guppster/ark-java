@@ -1,3 +1,4 @@
+package io.ark.core.groovy
 
 import groovyx.net.http.AsyncHTTPBuilder
 import groovy.transform.*

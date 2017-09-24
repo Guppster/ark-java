@@ -3,7 +3,6 @@
  */
 
 import spock.lang.Specification
-import io.ark.core.*
 
 class NetworkTest extends Specification {
 

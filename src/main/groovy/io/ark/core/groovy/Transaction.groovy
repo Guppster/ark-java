@@ -1,3 +1,5 @@
+package io.ark.core.groovy
+
 import java.nio.*
 import com.google.common.io.BaseEncoding
 import com.google.gson.Gson

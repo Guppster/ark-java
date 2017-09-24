@@ -1,4 +1,4 @@
-package io.ark.core
+package io.ark.core.groovy
 
 class Account extends Object {
     String address

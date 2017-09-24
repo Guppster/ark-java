@@ -1,3 +1,5 @@
+package io.ark.core.groovy
+
 import java.nio.*
 import org.bitcoinj.core.*
 import org.bitcoinj.crypto.*
