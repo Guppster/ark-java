@@ -25,4 +25,19 @@ data class Network(
 
         return true
     }
+
+    fun leftShift(transaction: Transaction): Int
+    {
+        for (i in 1..broadcastMax)
+        {
+           getRandomPeer().postTransaction(transaction)
+        }
+
+        return broadcastMax
+    }
+
+    private fun getRandomPeer(): Peer
+    {
+       return peers[random.nextInt(peers.size)]
+    }
 }
