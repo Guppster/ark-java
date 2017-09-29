@@ -25,7 +25,7 @@ Provides a Network object that represents the ARK Devnet
 
 `timestamp` : int
 
-TODO
+When the transaction took place
 
 `recipientId` : String
 
@@ -88,12 +88,14 @@ ID of the transaction itself
 ## TransactionTypes
 
 ### Defined Enums
+
 * `TransactionType.NORAML` : 0
 * `TransactionType.SECONDSIGNATURE` : 1
 * `TransactionType.VOTE` : 2
 * `TransactionType.DELEGATE` : 3
 
-## Capabilities
+### Capabilities
+
 * `getByteValue()` : Byte
 
 Returns a byte representation of the enum value. 
@@ -102,6 +104,7 @@ Returns a byte representation of the enum value.
 ## Accounts
 
 ### Fields
+
 `address` : String
 
 The address of the account
@@ -130,7 +133,8 @@ The id's of previous votes
 
 TODO
 
-## Capabilities
+### Capabilities
+
 * `applyTransaction()` : boolean
 * `undoTransaction()` : boolean
 * `verifyTransaction()` : Verification
@@ -141,7 +145,8 @@ TODO
 
 `networkVersion` : Byte
 
-## Capabilities
+### Capabilities
+
 * `sign(Transaction t, String passphrase)` : ECKey.DCDSASignature
 * `secondSign(Transaction t, String passphrase)` : ECKey.DCDSASignature
 * `signBytes(bytes[] bytes, String passphrase)` : ECKey.DCDSASignature
@@ -156,8 +161,22 @@ TODO
 
 ## Peers
 
-## Verification
+### Constants
 
-## Block
+`ip` : String
 
-## Slot
+`port` : int
+
+`protocol` : String
+
+`status` : String
+
+### Capabilities
+
+* `create(String string, networkHeaders = Network.Mainnet.headers)` : Peer
+* `request(String method, String path, body = [:]))` : Future<Request>
+* `getStatus()` : Map
+* `postTransaction(Transaction transaction)` : Map
+* `getPeers()` : Map
+* `leftShift(Transaction transaction)` : Map
+
