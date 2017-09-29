@@ -36,6 +36,13 @@ class Transaction extends Object {
   Map<String, Object> asset = [:]
   String id
 
+    /**
+     * Serializes this transaction object into a byte array
+     *
+     * @param skipSignature
+     * @param skipSecondSignature
+     * @return an array of bytes representing this object
+     */
   public byte[] toBytes(boolean skipSignature = true, boolean skipSecondSignature = true){
     ByteBuffer buffer = ByteBuffer.allocate(1000)
     buffer.order(ByteOrder.LITTLE_ENDIAN)
@@ -82,6 +89,7 @@ class Transaction extends Object {
     // else if(type==4){
     //   buffer.put BaseEncoding.base16().lowerCase().decode(asset.signature)
     // }
+
 
     if(!skipSignature && signature){
       buffer.put BaseEncoding.base16().lowerCase().decode(signature)
