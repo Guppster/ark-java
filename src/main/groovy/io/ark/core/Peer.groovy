@@ -25,13 +25,8 @@ class Peer extends Object {
     }
 
     // return Future that will deliver the JSON as a Map
-    public Future request(String method, String path, body = [:]){
-        request(method, path, null, body);
-    }
-
-    // return Future that will deliver the JSON as a Map
-    // the "query" argument allows to pass URL parameters as param1=value1&param2=value2&... string
-    public Future request(String method, String path, String query, body = [:]){
+    // the "query" argument allows to pass URL parameters as param1: 'value1', param2: 'value2'... string
+    public Future request(String method, String path, query = [:], body = [:]){
         if(!http)
             http = new AsyncHTTPBuilder(uri: "${protocol}${ip}:${port}")
 
@@ -51,7 +46,7 @@ class Peer extends Object {
 
         http.request(_method, JSON) {
             uri.path = path
-            uri.rawQuery = query
+            uri.query = query
             headers << networkHeaders
             body = body
 
